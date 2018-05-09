@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="7Ad-RQ-I85">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Direct Message View Controller-->
+        <scene sceneID="UFs-Eb-J85">
+            <objects>
+                <viewController id="7Ad-RQ-I85" customClass="DirectMessageViewController" customModule="TWDM" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="oA7-Ji-Vfr">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" allowsSelection="NO" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="YxH-Ic-Mav">
+                                <rect key="frame" x="0.0" y="64" width="375" height="557"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </tableView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="znr-Gw-HRq">
+                                <rect key="frame" x="0.0" y="621" width="375" height="46"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" priority="750" constant="46" id="jyo-AG-Wi3"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gmd-oE-xL8">
+                                <rect key="frame" x="0.0" y="667" width="375" height="0.0"/>
+                                <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="znr-Gw-HRq" firstAttribute="leading" secondItem="YKs-KL-yey" secondAttribute="leading" id="0YF-rm-idH"/>
+                            <constraint firstItem="gmd-oE-xL8" firstAttribute="top" secondItem="znr-Gw-HRq" secondAttribute="bottom" id="5t2-w6-vkc"/>
+                            <constraint firstItem="znr-Gw-HRq" firstAttribute="trailing" secondItem="YKs-KL-yey" secondAttribute="trailing" id="6MB-w2-mIz"/>
+                            <constraint firstItem="gmd-oE-xL8" firstAttribute="leading" secondItem="YKs-KL-yey" secondAttribute="leading" id="7US-03-yAt"/>
+                            <constraint firstItem="YxH-Ic-Mav" firstAttribute="leading" secondItem="YKs-KL-yey" secondAttribute="leading" id="EKf-CB-hPK"/>
+                            <constraint firstItem="YxH-Ic-Mav" firstAttribute="top" secondItem="YKs-KL-yey" secondAttribute="top" id="Egw-JA-mDU"/>
+                            <constraint firstItem="YKs-KL-yey" firstAttribute="bottom" secondItem="znr-Gw-HRq" secondAttribute="bottom" id="KLn-PW-JqG"/>
+                            <constraint firstItem="znr-Gw-HRq" firstAttribute="top" secondItem="YxH-Ic-Mav" secondAttribute="bottom" id="O2l-10-FR1"/>
+                            <constraint firstItem="YxH-Ic-Mav" firstAttribute="trailing" secondItem="YKs-KL-yey" secondAttribute="trailing" id="S1C-R5-SWx"/>
+                            <constraint firstAttribute="bottom" secondItem="gmd-oE-xL8" secondAttribute="bottom" id="svU-dK-ft3"/>
+                            <constraint firstItem="YKs-KL-yey" firstAttribute="trailing" secondItem="gmd-oE-xL8" secondAttribute="trailing" id="xAV-83-KWx"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="YKs-KL-yey"/>
+                    </view>
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
+                    <connections>
+                        <outlet property="messageInputBarContainer" destination="znr-Gw-HRq" id="rJh-Zk-N6t"/>
+                        <outlet property="tableView" destination="YxH-Ic-Mav" id="uhI-6R-BvN"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="cjY-Dq-d2c" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="205.59999999999999" y="277.51124437781112"/>
+        </scene>
+    </scenes>
+</document>

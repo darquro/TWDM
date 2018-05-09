@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="MessageInputBar" customModule="TWDM" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="501" height="66"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="Xdd-hg-4CW">
+                    <rect key="frame" x="8" y="8" width="417" height="50"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="30" id="2Cb-15-Zip"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                </textView>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="c8x-cB-xdV">
+                    <rect key="frame" x="433" y="28" width="60" height="30"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="60" id="2pw-0o-ecC"/>
+                    </constraints>
+                    <state key="normal" title="Post"/>
+                    <connections>
+                        <action selector="didTapPostButton:" destination="iN0-l3-epB" eventType="touchUpInside" id="ndG-nS-ONY"/>
+                    </connections>
+                </button>
+            </subviews>
+            <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+            <constraints>
+                <constraint firstItem="c8x-cB-xdV" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" priority="250" id="AYP-2M-RgU"/>
+                <constraint firstItem="Xdd-hg-4CW" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="8" id="IKl-MU-1ZE"/>
+                <constraint firstItem="Xdd-hg-4CW" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" constant="8" id="MPv-fi-l10"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="c8x-cB-xdV" secondAttribute="trailing" constant="8" id="N4e-Im-GiZ"/>
+                <constraint firstItem="c8x-cB-xdV" firstAttribute="leading" secondItem="Xdd-hg-4CW" secondAttribute="trailing" constant="8" id="hVb-t6-pfA"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="Xdd-hg-4CW" secondAttribute="bottom" constant="8" id="s6w-x7-RpY"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" relation="lessThanOrEqual" secondItem="c8x-cB-xdV" secondAttribute="bottom" constant="8" id="uKL-br-hh5"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <connections>
+                <outlet property="inputTextView" destination="Xdd-hg-4CW" id="Okf-bb-v6O"/>
+            </connections>
+            <point key="canvasLocation" x="87.5" y="338"/>
+        </view>
+    </objects>
+</document>
